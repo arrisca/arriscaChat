@@ -1,27 +1,17 @@
-# ArriscaChat
+# Arrisca Chat
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+This Angular app (version 10.2.0) is an integration Firebase Chat application.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run 
+```bash
+ng serve --open
+```
+for a dev server. It will open `http://localhost:4200/` to your default browser.
+ The app will automatically reload if you change any of the source files.
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on this App please contact
+[Amit Sharma](mailto:amit18april86@gmail.com?subject=[GitHub]%20Regarding%20Arrisca%20WebChat%20App)
