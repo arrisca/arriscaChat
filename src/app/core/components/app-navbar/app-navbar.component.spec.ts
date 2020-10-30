@@ -1,5 +1,5 @@
 import {LayoutModule} from '@angular/cdk/layout';
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -8,17 +8,21 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 import {AppNavbarComponent} from './app-navbar.component';
+import {StoreModule} from '@ngrx/store';
+import * as homePageStore from '../../../home/reducers/home-page.reducer';
 
 describe('AppNavbarComponent', () => {
   let component: AppNavbarComponent;
   let fixture: ComponentFixture<AppNavbarComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [AppNavbarComponent],
       imports: [
         NoopAnimationsModule,
         LayoutModule,
+        StoreModule.forRoot({}),
+        StoreModule.forFeature('HomePage', homePageStore.reducer),
         MatButtonModule,
         MatIconModule,
         MatListModule,
