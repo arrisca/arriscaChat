@@ -10,6 +10,8 @@ import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
 import {metaReducers, reducers} from '@core/reducers';
 import {HomeModule} from './home/home.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CoreModule} from '@core/core.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {HomeModule} from './home/home.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HomeModule,
+    CoreModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     EffectsModule.forRoot([]),

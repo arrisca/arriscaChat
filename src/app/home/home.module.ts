@@ -1,15 +1,19 @@
 import {NgModule} from '@angular/core';
+import * as homePageReducer from './reducers/home-page.reducer';
+import {homePageFeatureKey} from './reducers/home-page.reducer';
+
 import {CommonModule} from '@angular/common';
-
 import {HomeRoutingModule} from './home-routing.module';
-import {HomeComponent} from './components/home/home.component';
-
+import {HomePageComponent} from './components/home-page/home-page.component';
+import {StoreModule} from '@ngrx/store';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomePageComponent],
+  exports: [],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    StoreModule.forFeature(homePageFeatureKey, homePageReducer.reducer)
   ]
 })
 export class HomeModule {

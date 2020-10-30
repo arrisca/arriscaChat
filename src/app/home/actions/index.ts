@@ -1,1 +1,1 @@
-export * from './home.action';
+export * from './home-page.action';

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+
+html, body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font: 400 14px/20px 'Montserrat', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.material-icons {
+  cursor: pointer;
+}

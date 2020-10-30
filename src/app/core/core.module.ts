@@ -1,19 +1,22 @@
-import {ErrorHandler, NgModule, Optional, SkipSelf} from '@angular/core';
+import {NgModule, Optional, SkipSelf} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
-import {AppInterceptorService} from '@core/services/app-interceptor.service';
-import {ErrorLogService} from '@core/services/error-log.service';
+import {AppNavbarComponent} from './components/app-navbar/app-navbar.component';
+import {LayoutModule} from '@angular/cdk/layout';
+import {RouterModule} from '@angular/router';
+import {SharedModule} from '@shared/shared.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [AppNavbarComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    LayoutModule,
+    SharedModule,
+    RouterModule
   ],
-  providers: [
-    ErrorLogService,
-    {provide: HTTP_INTERCEPTORS, useClass: AppInterceptorService, multi: true},
-    {provide: ErrorHandler, useClass: ErrorLogService}
-  ]
+  exports: [
+    AppNavbarComponent
+  ],
+  providers: []
 })
 export class CoreModule {
   constructor(
