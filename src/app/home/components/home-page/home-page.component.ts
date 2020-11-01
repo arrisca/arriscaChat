@@ -8,7 +8,7 @@ import {homePageLoad} from '../../actions';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-  title = 'Arrrisca Chat';
+  title = 'Arrisca Chat';
 
   constructor(private homePageStore: Store) {
     homePageStore.dispatch(homePageLoad({appName: this.title}));
