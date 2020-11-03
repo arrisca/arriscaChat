@@ -3,10 +3,11 @@ import {CommonModule} from '@angular/common';
 import {AppNavbarComponent} from './components/app-navbar/app-navbar.component';
 import {LayoutModule} from '@angular/cdk/layout';
 import {RouterModule} from '@angular/router';
+import {AppUnlessDirective, HighlightDirective} from '@core/directives';
 import {SharedModule} from '@shared/shared.module';
 
 @NgModule({
-  declarations: [AppNavbarComponent],
+  declarations: [AppNavbarComponent, AppUnlessDirective, HighlightDirective],
   imports: [
     CommonModule,
     LayoutModule,
@@ -14,7 +15,9 @@ import {SharedModule} from '@shared/shared.module';
     RouterModule
   ],
   exports: [
-    AppNavbarComponent
+    AppNavbarComponent,
+    AppUnlessDirective,
+    HighlightDirective
   ],
   providers: []
 })

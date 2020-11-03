@@ -6,13 +6,14 @@ import {CommonModule} from '@angular/common';
 import {HomeRoutingModule} from './home-routing.module';
 import {HomePageComponent} from './components/home-page/home-page.component';
 import {StoreModule} from '@ngrx/store';
+import {CoreModule} from '@core/core.module';
 
 @NgModule({
   declarations: [HomePageComponent],
-  exports: [],
   imports: [
     CommonModule,
     HomeRoutingModule,
+    CoreModule,
     StoreModule.forFeature(homePageFeatureKey, homePageReducer.reducer)
   ]
 })

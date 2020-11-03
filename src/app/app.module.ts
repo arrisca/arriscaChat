@@ -12,6 +12,7 @@ import {metaReducers, reducers} from '@core/reducers';
 import {HomeModule} from './home/home.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CoreModule} from '@core/core.module';
+import {SharedModule} from '@shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {CoreModule} from '@core/core.module';
     BrowserAnimationsModule,
     HomeModule,
     CoreModule,
+    SharedModule.forRoot(),
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     EffectsModule.forRoot([]),
